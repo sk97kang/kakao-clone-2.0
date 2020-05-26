@@ -146,6 +146,11 @@
   animation: turn 1s linear infinite forwards;
 }
 
+.incoming-message img:hover {
+  animation: none;
+  cursor: pointer;
+}
+
 .message .message__bubble {
   background-color: white;
   display: block;
@@ -203,4 +208,18 @@
 
 .sent-message {
   animation: sentAnim 0.5s ease-out;
+}
+
+@keyframes bubble {
+  from {
+    transform: none;
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.message__bubble:hover {
+  animation: bubble 0.5s linear infinite alternate;
+  cursor: pointer;
 }
